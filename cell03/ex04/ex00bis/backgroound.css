@@ -1,0 +1,15 @@
+#botaoMudarCorDoBody {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+#botaoMudarCorDoBody:hover {
+    background-color: #007bff;
+}

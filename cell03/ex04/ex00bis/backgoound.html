@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Link Css-->
+    <link rel="stylesheet" href="./backgroound.css">
+
+    <!--Link jQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+<body>
+
+    <h1>Clique no Botão para Mudar a Cor!</h1>
+
+    <button id="botaoMudarCorDoBody">Mudar Fundo da Página</button>
+
+<script>
+     $(document).ready(function () {
+        // Seleciona o corpo da página e o botão
+        const $corpoDaPagina = $('body');
+        const $botaoMudarFundo = $('#botaoMudarCorDoBody');
+
+        // Array de cores para alternar
+        const cores = ['#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#33FFF5'];
+        let indiceCor = 0;
+
+        // Função para mudar a cor do fundo da página
+        function mudarCorDoFundo() {
+            $corpoDaPagina.css('background-color', cores[indiceCor]);
+            indiceCor = (indiceCor + 1) % cores.length;
+        }
+
+        // Evento de clique
+        $botaoMudarFundo.on('click', mudarCorDoFundo);
+    });
+
+    // Seleciona o botão e o corpo da página
+    // const corpoDaPagina = document.body;
+    // const botaoMudarFundo = document.getElementById('botaoMudarCorDoBody');
+
+    // Array de cores para alternar
+    // const cores = ['#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#33FFF5'];
+    // let indiceCor = 0;
+
+    // Função para mudar a cor do fundo da página
+    // function mudarCorDoFundo() {
+        // corpoDaPagina.style.backgroundColor = cores[indiceCor];
+        // indiceCor = (indiceCor + 1) % cores.length; // Avança para a próxima cor
+    // }
+
+    // Adiciona os "ouvintes de evento" (event listeners)
+
+    // botaoMudarFundo.addEventListener('click', mudarCorDoFundo);
+</script>
+
+</body>
+</html>
